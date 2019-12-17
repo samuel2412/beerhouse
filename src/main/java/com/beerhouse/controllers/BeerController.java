@@ -29,7 +29,7 @@ public class BeerController {
 	@Autowired BeerRepository beerRepo;
 	
 	//gets
-	@GetMapping
+	@GetMapping(produces = "application/json")
 	public List<Beer> getBeers() {
 		return beerRepo.findAll();
 	}
